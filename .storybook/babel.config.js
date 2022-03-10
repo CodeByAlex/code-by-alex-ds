@@ -1,4 +1,4 @@
-
+// THIS FILE IS ONLY USED FOR STORYBOOK
 
 const modules = process.env.BABEL_MODE === 'cjs' ? 'auto' : false;
 
