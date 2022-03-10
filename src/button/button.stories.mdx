@@ -1,0 +1,70 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+import { html } from 'lit';
+import './button.ts';
+
+<Meta
+  title="Components / Button"
+  component="cba-button"
+  argTypes={{
+    buttonText: 'Button',
+    variant: {
+      options: ['primary', 'secondary', 'tertiary'],
+      control: { type: 'select' }
+    },
+  }}
+/>
+
+# Beacon Button
+
+Stories that show the different variations of a button.
+
+<Canvas withSource="open">
+  <Story
+    name="Button - primary"
+    component="cba-button"
+    args={{
+      buttonText: 'Primary Button',
+      variant: 'primary',
+    }}
+  >
+    {(args) => html`
+        <cba-button variant="${args.variant}">${args.buttonText}</cba-button>
+    `}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Button - primary" />
+
+<Canvas withSource="open">
+  <Story
+    name="Button - secondary"
+    component="cba-button"
+    args={{
+      buttonText: 'Secondary Button',
+      variant: 'secondary',
+    }}
+  >
+    {(args) => html`
+        <cba-button variant="${args.variant}">${args.buttonText}</cba-button>
+    `}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Button - secondary" />
+
+<Canvas withSource="open">
+  <Story
+    name="Button - tertiary"
+    component="cba-button"
+    args={{
+      buttonText: 'Tertiary Button',
+      variant: 'tertiary',
+    }}
+  >
+    {(args) => html`
+        <cba-button variant="${args.variant}" >${args.buttonText}</cba-button>
+    `}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Button - tertiary" />

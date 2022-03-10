@@ -1,0 +1,52 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+import { html } from 'lit';
+import {Navigation} from './navigation.ts';
+
+<Meta
+  title="Structure / Navigation"
+  component="cba-navigation"
+   argTypes={{
+    brandTitle: 'Brand Name',
+    linksObjs: []
+  }}
+/>
+
+# CBA NAV
+
+Stories that show the different variations of a button.
+
+<Canvas withSource="open">
+  <Story
+    name="Navigation"
+    component="cba-navigation"
+    args={{
+      brandTitle: 'Code By Alex',
+      linksObjs: [{
+        title: 'ABOUT',
+        url: 'https://www.google.com'  
+      },
+      {
+        title: 'ABILITIES',
+        url: 'https://www.google.com'  
+      },
+      {
+        title: 'EXPERIENCE',
+        url: 'https://www.google.com'  
+      },
+      {
+        title: 'SPEAKING',
+        url: 'https://www.google.com'  
+      },
+      {
+        title: 'CONTACT',
+        url: 'https://www.google.com'  
+      }]
+    }}
+  >
+    {(args) => html`
+        <cba-navigation brandName="${args.brandTitle}" links="${JSON.stringify(args.linksObjs)}"></cba-navigation>
+    `}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Button - primary" />

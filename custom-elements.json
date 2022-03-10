@@ -1,0 +1,512 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "src/declaration.d.ts",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/typings.d.ts",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components-working/sb-button.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SbButton",
+          "cssProperties": [
+            {
+              "description": "Controls the color of bar",
+              "name": "--sb-primary-color",
+              "default": "#1ea7fd"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "primary",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "Set button in primary mode",
+              "privacy": "public",
+              "attribute": "primary"
+            },
+            {
+              "kind": "field",
+              "name": "backgroundColor",
+              "type": {
+                "text": "string | undefined"
+              },
+              "privacy": "public",
+              "attribute": "background-color"
+            },
+            {
+              "kind": "field",
+              "name": "size",
+              "type": {
+                "text": "'small' | 'medium' | 'large'"
+              },
+              "default": "'medium'",
+              "privacy": "public",
+              "attribute": "size"
+            },
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "privacy": "public",
+              "attribute": "label",
+              "reflects": true
+            },
+            {
+              "kind": "method",
+              "name": "onClick",
+              "privacy": "private"
+            }
+          ],
+          "events": [
+            {
+              "name": "sb-button:click",
+              "type": {
+                "text": "CustomEvent"
+              },
+              "description": "Custom event send when the button is clicked"
+            }
+          ],
+          "attributes": [
+            {
+              "type": {
+                "text": "string"
+              },
+              "description": "Label of the button",
+              "name": "label",
+              "fieldName": "label"
+            },
+            {
+              "type": {
+                "text": "string"
+              },
+              "description": "Size of the button, can be \"small\", \"medium\" or \"large\"; default is \"medium\".",
+              "name": "size",
+              "fieldName": "size"
+            },
+            {
+              "type": {
+                "text": "string"
+              },
+              "description": "Color of the button's background",
+              "name": "backgroundColor"
+            },
+            {
+              "name": "primary",
+              "fieldName": "primary"
+            },
+            {
+              "name": "background-color",
+              "fieldName": "backgroundColor"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "sb-button",
+          "summary": "This is a simple Storybook Button",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "SbButton",
+          "declaration": {
+            "name": "SbButton",
+            "module": "src/components-working/sb-button.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "sb-button",
+          "declaration": {
+            "name": "SbButton",
+            "module": "src/components-working/sb-button.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components-working/sb-header.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SbHeader",
+          "members": [
+            {
+              "kind": "field",
+              "name": "user",
+              "type": {
+                "text": "{} | undefined"
+              },
+              "privacy": "public",
+              "attribute": "user",
+              "reflects": true
+            },
+            {
+              "kind": "method",
+              "name": "dispatchCustomEvent",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "eventName",
+                  "type": {
+                    "text": "string"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "logInOutButton",
+              "privacy": "private"
+            }
+          ],
+          "events": [
+            {
+              "type": {
+                "text": "CustomEvent"
+              }
+            },
+            {
+              "type": {
+                "text": "CustomEvent"
+              },
+              "description": "Event send when user clicks on create account button",
+              "name": "sb-header:createAccount"
+            },
+            {
+              "type": {
+                "text": "CustomEvent"
+              },
+              "description": "Event send when user clicks on login button",
+              "name": "sb-header:login"
+            },
+            {
+              "type": {
+                "text": "CustomEvent"
+              },
+              "description": "Event send when user clicks on logout button",
+              "name": "sb-header:logout"
+            }
+          ],
+          "attributes": [
+            {
+              "type": {
+                "text": "Object"
+              },
+              "description": "User of the app",
+              "name": "user",
+              "fieldName": "user"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "sb-header",
+          "summary": "This is a simple Storybook Header",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "SbHeader",
+          "declaration": {
+            "name": "SbHeader",
+            "module": "src/components-working/sb-header.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "sb-header",
+          "declaration": {
+            "name": "SbHeader",
+            "module": "src/components-working/sb-header.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components-working/sb-page.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SbPage",
+          "members": [
+            {
+              "kind": "field",
+              "name": "user",
+              "type": {
+                "text": "{} | undefined"
+              },
+              "privacy": "public",
+              "attribute": "user",
+              "reflects": true
+            }
+          ],
+          "attributes": [
+            {
+              "type": {
+                "text": "Object"
+              },
+              "description": "User of the app",
+              "name": "user",
+              "fieldName": "user"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "sb-page",
+          "summary": "This is a simple Storybook Page",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "SbPage",
+          "declaration": {
+            "name": "SbPage",
+            "module": "src/components-working/sb-page.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "sb-page",
+          "declaration": {
+            "name": "SbPage",
+            "module": "src/components-working/sb-page.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components-not-working/button/button.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "The Outline Button component",
+          "name": "Button",
+          "slots": [
+            {
+              "description": "The default, and only slot for this element.",
+              "name": ""
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "variant",
+              "type": {
+                "text": "ButtonVariant"
+              },
+              "default": "'primary'",
+              "description": "The button style variant to use.",
+              "attribute": "variant"
+            },
+            {
+              "kind": "field",
+              "name": "isDisabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Whether the button is disabled",
+              "attribute": "isDisabled"
+            },
+            {
+              "kind": "field",
+              "name": "onClick",
+              "type": {
+                "text": "() => void"
+              },
+              "description": "A click handler to be passed only to onClick. DO NOT USE @click on this component.",
+              "attribute": "onClick"
+            },
+            {
+              "kind": "field",
+              "name": "onKeyUp",
+              "type": {
+                "text": "() => void"
+              },
+              "description": "A keyUp handler to be passed to the onKeyUp. DO NOT USE @keyup on this component.",
+              "attribute": "onKeyUp"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "variant",
+              "type": {
+                "text": "ButtonVariant"
+              },
+              "default": "'primary'",
+              "description": "The button style variant to use.",
+              "fieldName": "variant"
+            },
+            {
+              "name": "isDisabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Whether the button is disabled",
+              "fieldName": "isDisabled"
+            },
+            {
+              "name": "onClick",
+              "type": {
+                "text": "() => void"
+              },
+              "description": "A click handler to be passed only to onClick. DO NOT USE @click on this component.",
+              "fieldName": "onClick"
+            },
+            {
+              "name": "onKeyUp",
+              "type": {
+                "text": "() => void"
+              },
+              "description": "A keyUp handler to be passed to the onKeyUp. DO NOT USE @keyup on this component.",
+              "fieldName": "onKeyUp"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "cba-button",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "Button",
+          "declaration": {
+            "name": "Button",
+            "module": "src/components-not-working/button/button.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "cba-button",
+          "declaration": {
+            "name": "Button",
+            "module": "src/components-not-working/button/button.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components-not-working/navigation/navigation.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "The Outline Button component",
+          "name": "Navigation",
+          "slots": [
+            {
+              "description": "The default, and only slot for this element.",
+              "name": ""
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "brandName",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "The button style variant to use.",
+              "attribute": "brandName"
+            },
+            {
+              "kind": "field",
+              "name": "links",
+              "type": {
+                "text": "array"
+              },
+              "default": "[]",
+              "description": "The button style variant to use.",
+              "attribute": "links"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "brandName",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "The button style variant to use.",
+              "fieldName": "brandName"
+            },
+            {
+              "name": "links",
+              "type": {
+                "text": "array"
+              },
+              "default": "[]",
+              "description": "The button style variant to use.",
+              "fieldName": "links"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "cba-navigation",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "Navigation",
+          "declaration": {
+            "name": "Navigation",
+            "module": "src/components-not-working/navigation/navigation.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "cba-navigation",
+          "declaration": {
+            "name": "Navigation",
+            "module": "src/components-not-working/navigation/navigation.ts"
+          }
+        }
+      ]
+    }
+  ]
+}
