@@ -63,89 +63,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/navigation/navigation.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "The Outline Button component",
-          "name": "Navigation",
-          "slots": [
-            {
-              "description": "The default, and only slot for this element.",
-              "name": ""
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "brandName",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "The button style variant to use.",
-              "attribute": "brandName"
-            },
-            {
-              "kind": "field",
-              "name": "links",
-              "type": {
-                "text": "array"
-              },
-              "default": "[]",
-              "description": "The button style variant to use.",
-              "attribute": "links"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "brandName",
-              "type": {
-                "text": "string"
-              },
-              "default": "''",
-              "description": "The button style variant to use.",
-              "fieldName": "brandName"
-            },
-            {
-              "name": "links",
-              "type": {
-                "text": "array"
-              },
-              "default": "[]",
-              "description": "The button style variant to use.",
-              "fieldName": "links"
-            }
-          ],
-          "superclass": {
-            "name": "LitElement",
-            "package": "lit"
-          },
-          "tagName": "cba-navigation",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "Navigation",
-          "declaration": {
-            "name": "Navigation",
-            "module": "src/navigation/navigation.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "cba-navigation",
-          "declaration": {
-            "name": "Navigation",
-            "module": "src/navigation/navigation.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "src/button/button.ts",
       "declarations": [
         {
@@ -219,6 +136,93 @@
           "declaration": {
             "name": "Button",
             "module": "src/button/button.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/navigation/navigation.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "The Outline Button component",
+          "name": "Navigation",
+          "slots": [
+            {
+              "description": "The default, and only slot for this element.",
+              "name": ""
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "brandName",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "The button style variant to use.",
+              "attribute": "brandName"
+            },
+            {
+              "kind": "field",
+              "name": "links",
+              "type": {
+                "text": "array"
+              },
+              "default": "[]",
+              "description": "The button style variant to use.",
+              "attribute": "links"
+            },
+            {
+              "kind": "field",
+              "name": "getId"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "brandName",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "description": "The button style variant to use.",
+              "fieldName": "brandName"
+            },
+            {
+              "name": "links",
+              "type": {
+                "text": "array"
+              },
+              "default": "[]",
+              "description": "The button style variant to use.",
+              "fieldName": "links"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "cba-navigation",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "Navigation",
+          "declaration": {
+            "name": "Navigation",
+            "module": "src/navigation/navigation.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "cba-navigation",
+          "declaration": {
+            "name": "Navigation",
+            "module": "src/navigation/navigation.ts"
           }
         }
       ]

@@ -11,7 +11,7 @@ import {Navigation} from './navigation.ts';
   }}
 />
 
-# CBA NAV
+# CBA Navigation
 
 Stories that show the different variations of a button.
 
@@ -44,7 +44,9 @@ Stories that show the different variations of a button.
     }}
   >
     {(args) => html`
-        <cba-navigation brandName="${args.brandTitle}" links="${JSON.stringify(args.linksObjs)}"></cba-navigation>
+      <div>
+        <cba-navigation class="hello" brandName="${args.brandTitle}" links="${JSON.stringify(args.linksObjs)}"></cba-navigation>
+        </div>
     `}
   </Story>
 </Canvas>

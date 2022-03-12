@@ -1,5 +1,6 @@
 import { html, TemplateResult, CSSResultGroup, LitElement, css, unsafeCSS, CSSResult } from 'lit';
 import { customElement, property, queryAll, queryAssignedNodes } from 'lit/decorators.js';
+import { classMap } from 'lit/directives/class-map.js';
 import style from './navigation.scss';
 /**
  * The Outline Button component
@@ -7,6 +8,8 @@ import style from './navigation.scss';
  */
 @customElement('cba-navigation')
 export class Navigation extends LitElement {
+
+  isNavOpen = false;
 
   static get styles() {
     return [style];
@@ -24,41 +27,34 @@ export class Navigation extends LitElement {
   @property({ type: Array })
   links = [];
 
+  getId = (linkTitle: string) => {
+    const transformedLinkTitle = linkTitle && linkTitle ? linkTitle.toLowerCase().replace(' ', '-') : '';
+    return `${transformedLinkTitle}-link`
+  }
+
+  toggleState = () => {
+    this.isNavOpen = !this.isNavOpen;
+    this.requestUpdate()
+  }
+
   render(): TemplateResult {
     return html`
     <nav class="navigation-container">
-      <div>
+      <div class="brand-section">
         <a id="home-link" class="title-font" href="#home">${this.brandName}</a>
+        <button type="button" class="nav-toggle" @click=${e => this.toggleState()} aria-label="Menu">
+          <span class="icon-bar" aria-hidden="true"></span>
+          <span class="icon-bar" aria-hidden="true"></span>
+          <span class="icon-bar" aria-hidden="true"></span>
+        </button>
       </div>
-      <div class="link-container">
-        ${this.links.map((link: any) => html`<a class="link" href="${link.url}">${link.title}</a>`)}
+      <div class=${classMap({
+        'link-container': true,
+        'hide-links': !this.isNavOpen
+        })}>
+        ${this.links.map((link: any) => html`<a class="link" id="${this.getId(link.title)}" href="${link.url}">${link.title}</a>`)}
       </div>
     </nav>
     `;
   }
 }
-// <nav class="">
-// <div class="container-fluid">
-//   <div class="navbar-header">
-//     <a #link id="home-link" class="navbar-brand title-font" href="#home" (click)="scrollToSection('home', $event)">Code By Alex</a>
-//     <button type="button" class="navbar-toggle collapsed" (click)="toggleState()" aria-label="Menu">
-//       <span class="icon-bar" aria-hidden="true"></span>
-//       <span class="icon-bar" aria-hidden="true"></span>
-//       <span class="icon-bar" aria-hidden="true"></span>
-//     </button>
-//   </div>
-
-//   <!-- Collect the nav links, forms, and other content for toggling -->
-//   <div class="navbar-right" >
-//     <div class="collapse navbar-collapse" [ngClass]="{'in': isIn}">
-//       <ul class="nav navbar-nav">
-//         <li><a #link id="about-link" href="#about" class="link" [ngClass]="isScrollDown?'link-down':'link-up'" (click)="scrollToSection('about', $event)" (click)="closeNav()">ABOUT</a></li>
-//         <li><a #link id="abilities-link" href="#abilities" [ngClass]="isScrollDown?'link-down':'link-up'" (click)="scrollToSection('abilities', $event)" (click)="closeNav()">ABILITIES</a></li>
-//         <li><a #link id="experience-link" href="#experience" [ngClass]="isScrollDown?'link-down':'link-up'" (click)="scrollToSection('experience', $event)" (click)="closeNav()">EXPERIENCE</a></li>
-//         <li><a #link id="speaking-link" href="#speaking" [ngClass]="isScrollDown?'link-down':'link-up'" (click)="scrollToSection('speaking', $event)" (click)="closeNav()">SPEAKING</a></li>
-//         <li><a #link id="contact-link" href="#contact" [ngClass]="isScrollDown?'link-down':'link-up'" (click)="scrollToSection('contact', $event)" (click)="closeNav()">CONTACT</a></li>
-//       </ul>
-//     </div>
-//   </div>
-// </div>
-// </nav>
