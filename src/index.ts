@@ -1,2 +1,2 @@
-export * from './button/button';
-export * from './navigation/navigation';
+export * from './components/button/button';
+export * from './components/navigation/navigation';
