@@ -4,38 +4,6 @@
   "modules": [
     {
       "kind": "javascript-module",
-      "path": "dist/code-by-alex-ds.js",
-      "declarations": [
-        {
-          "kind": "variable",
-          "name": "t"
-        },
-        {
-          "kind": "variable",
-          "name": "e"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "custom-element-definition",
-          "name": "t",
-          "declaration": {
-            "name": "e",
-            "module": "dist/code-by-alex-ds.js"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "t",
-          "declaration": {
-            "name": "e",
-            "module": "dist/code-by-alex-ds.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "src/declaration.d.ts",
       "declarations": [],
       "exports": []
@@ -79,73 +47,32 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/components/button/button.ts",
+      "path": "dist/code-by-alex-ds.js",
       "declarations": [
         {
-          "kind": "class",
-          "description": "",
-          "name": "Button",
-          "members": [
-            {
-              "kind": "field",
-              "name": "variant",
-              "type": {
-                "text": "ButtonVariant"
-              },
-              "default": "'primary'",
-              "description": "Button variant type that influences the button's style",
-              "attribute": "variant"
-            },
-            {
-              "kind": "field",
-              "name": "onClick",
-              "type": {
-                "text": "() => void"
-              },
-              "attribute": "onClick"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "variant",
-              "type": {
-                "text": "ButtonVariant"
-              },
-              "default": "'primary'",
-              "description": "Button variant type that influences the button's style",
-              "fieldName": "variant"
-            },
-            {
-              "name": "onClick",
-              "type": {
-                "text": "() => void"
-              },
-              "fieldName": "onClick"
-            }
-          ],
-          "superclass": {
-            "name": "LitElement",
-            "package": "lit"
-          },
-          "tagName": "cba-button",
-          "customElement": true
+          "kind": "variable",
+          "name": "t"
+        },
+        {
+          "kind": "variable",
+          "name": "e"
         }
       ],
       "exports": [
         {
-          "kind": "js",
-          "name": "Button",
+          "kind": "custom-element-definition",
+          "name": "t",
           "declaration": {
-            "name": "Button",
-            "module": "src/components/button/button.ts"
+            "name": "e",
+            "module": "dist/code-by-alex-ds.js"
           }
         },
         {
           "kind": "custom-element-definition",
-          "name": "cba-button",
+          "name": "t",
           "declaration": {
-            "name": "Button",
-            "module": "src/components/button/button.ts"
+            "name": "e",
+            "module": "dist/code-by-alex-ds.js"
           }
         }
       ]
@@ -246,6 +173,62 @@
     },
     {
       "kind": "javascript-module",
+      "path": "src/components/rating/rating.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "Rating",
+          "members": [
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "Number"
+              },
+              "default": "0",
+              "attribute": "value"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "value",
+              "type": {
+                "text": "Number"
+              },
+              "default": "0",
+              "fieldName": "value"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "cba-rating",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "Rating",
+          "declaration": {
+            "name": "Rating",
+            "module": "src/components/rating/rating.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "cba-rating",
+          "declaration": {
+            "name": "Rating",
+            "module": "src/components/rating/rating.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "src/components/navigation/navigation.ts",
       "declarations": [
         {
@@ -335,6 +318,79 @@
           "declaration": {
             "name": "Navigation",
             "module": "src/components/navigation/navigation.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/button/button.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "Button",
+          "members": [
+            {
+              "kind": "field",
+              "name": "variant",
+              "type": {
+                "text": "ButtonVariant"
+              },
+              "default": "'primary'",
+              "description": "Button variant type that influences the button's style",
+              "attribute": "variant"
+            },
+            {
+              "kind": "field",
+              "name": "onClick",
+              "type": {
+                "text": "() => void"
+              },
+              "attribute": "onClick"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "variant",
+              "type": {
+                "text": "ButtonVariant"
+              },
+              "default": "'primary'",
+              "description": "Button variant type that influences the button's style",
+              "fieldName": "variant"
+            },
+            {
+              "name": "onClick",
+              "type": {
+                "text": "() => void"
+              },
+              "fieldName": "onClick"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "cba-button",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "Button",
+          "declaration": {
+            "name": "Button",
+            "module": "src/components/button/button.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "cba-button",
+          "declaration": {
+            "name": "Button",
+            "module": "src/components/button/button.ts"
           }
         }
       ]

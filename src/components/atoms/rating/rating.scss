@@ -1,0 +1,17 @@
+.star-icon {
+    color: transparent;
+    font-size: 15px;
+    content: '\2605'; /* Full star in UTF8 */
+    position: relative;
+}
+  
+.star-icon-full:before {
+    color: #e35a2e;
+    content: '\2605'; /* Full star in UTF8 */
+}
+  
+.star-icon-empty:before{
+    color: #59575369;
+    content: '\2605'; /* Full star in UTF8 */
+}
+  

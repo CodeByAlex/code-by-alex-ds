@@ -1,3 +1,7 @@
-export * from './components/button/button';
-export * from './components/navigation/navigation';
-export * from './components/link-icon/link-icon';
+// atomic components
+export * from './components/atoms/button/button';
+export * from './components/atoms/link-icon/link-icon';
+export * from './components/atoms/rating/rating';
+
+// structural components
+export * from './components//structure/navigation/navigation';

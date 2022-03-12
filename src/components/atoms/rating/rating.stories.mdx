@@ -1,0 +1,26 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+import { html } from 'lit';
+import './rating.ts';
+
+<Meta
+  title="Atomic Components / Rating"
+  component="cba-rating"
+/>
+
+# Beacon Rating
+
+<Canvas withSource="open">
+  <Story
+    name="Rating - default"
+    component="cba-rating"
+    args={{
+      value: 3
+    }}
+  >
+    {(args) => html`
+        <cba-rating value="${args.value}"></cba-rating>
+    `}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Rating - default" />
