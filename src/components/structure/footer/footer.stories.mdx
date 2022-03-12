@@ -1,0 +1,41 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+import { html } from 'lit';
+import './footer.ts';
+import '../../atoms/link-icon/link-icon.ts';
+
+<Meta
+  title="Structural Components / Footer"
+  component="cba-footer"
+/>
+
+# Beacon Rating
+
+<Canvas withSource="open">
+  <Story
+    name="Footer - default"
+    component="cba-footer"
+  >
+    {(args) => html`
+        <cba-footer></cba-footer>
+    `}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Footer - default" />
+
+<Canvas withSource="open">
+  <Story
+    name="Footer - with icons"
+    component="cba-footer"
+  >
+    {(args) => html`
+        <cba-footer>
+          <cba-link-icon logotitle="Twitter" url="https://twitter.com/codebyalex" imageurl="https://cdn4.iconfinder.com/data/icons/social-media-icons-the-circle-set/48/twitter_circle-512.png"></cba-link-icon>
+          <cba-link-icon logotitle="Github" url="https://github.com/CodeByAlex" imageurl="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png"></cba-link-icon>
+          <cba-link-icon logotitle="LinkedIn" url="https://github.com/CodeByAlex" imageurl="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/LinkedIn_icon_circle.svg/2048px-LinkedIn_icon_circle.svg.png"></cba-link-icon>
+        </cba-footer>
+    `}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Footer - with icons" />
