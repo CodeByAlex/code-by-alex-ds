@@ -4,94 +4,62 @@
   "modules": [
     {
       "kind": "javascript-module",
-      "path": "src/declaration.d.ts",
-      "declarations": [],
-      "exports": []
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/typings.d.ts",
-      "declarations": [],
-      "exports": []
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/button/button.ts",
+      "path": "dist/code-by-alex-ds.js",
       "declarations": [
         {
-          "kind": "class",
-          "description": "The Outline Button component",
-          "name": "Button",
-          "slots": [
-            {
-              "description": "The default, and only slot for this element.",
-              "name": ""
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "variant",
-              "type": {
-                "text": "ButtonVariant"
-              },
-              "default": "'primary'",
-              "description": "Button variant type that influences the button's style",
-              "attribute": "variant"
-            },
-            {
-              "kind": "field",
-              "name": "onClick",
-              "type": {
-                "text": "() => void"
-              },
-              "attribute": "onClick"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "variant",
-              "type": {
-                "text": "ButtonVariant"
-              },
-              "default": "'primary'",
-              "description": "Button variant type that influences the button's style",
-              "fieldName": "variant"
-            },
-            {
-              "name": "onClick",
-              "type": {
-                "text": "() => void"
-              },
-              "fieldName": "onClick"
-            }
-          ],
-          "superclass": {
-            "name": "LitElement",
-            "package": "lit"
-          },
-          "tagName": "cba-button",
-          "customElement": true
+          "kind": "variable",
+          "name": "t"
+        },
+        {
+          "kind": "variable",
+          "name": "e"
         }
       ],
       "exports": [
         {
-          "kind": "js",
-          "name": "Button",
+          "kind": "custom-element-definition",
+          "name": "cba-button",
           "declaration": {
-            "name": "Button",
-            "module": "src/button/button.ts"
+            "name": "e",
+            "module": "dist/code-by-alex-ds.js"
           }
         },
         {
           "kind": "custom-element-definition",
           "name": "cba-button",
           "declaration": {
-            "name": "Button",
-            "module": "src/button/button.ts"
+            "name": "t",
+            "module": "dist/code-by-alex-ds.js"
           }
         }
       ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/declaration.d.ts",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/index.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./button/button"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/typings.d.ts",
+      "declarations": [],
+      "exports": []
     },
     {
       "kind": "javascript-module",
@@ -172,6 +140,85 @@
           "declaration": {
             "name": "Navigation",
             "module": "src/navigation/navigation.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/button/button.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "The Outline Button component",
+          "name": "Button",
+          "slots": [
+            {
+              "description": "The default, and only slot for this element.",
+              "name": ""
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "variant",
+              "type": {
+                "text": "ButtonVariant"
+              },
+              "default": "'primary'",
+              "description": "Button variant type that influences the button's style",
+              "attribute": "variant"
+            },
+            {
+              "kind": "field",
+              "name": "onClick",
+              "type": {
+                "text": "() => void"
+              },
+              "attribute": "onClick"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "variant",
+              "type": {
+                "text": "ButtonVariant"
+              },
+              "default": "'primary'",
+              "description": "Button variant type that influences the button's style",
+              "fieldName": "variant"
+            },
+            {
+              "name": "onClick",
+              "type": {
+                "text": "() => void"
+              },
+              "fieldName": "onClick"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "cba-button",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "Button",
+          "declaration": {
+            "name": "Button",
+            "module": "src/button/button.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "cba-button",
+          "declaration": {
+            "name": "Button",
+            "module": "src/button/button.ts"
           }
         }
       ]

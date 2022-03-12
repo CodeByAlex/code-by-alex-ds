@@ -25,35 +25,13 @@ export class Navigation extends LitElement {
   links = [];
 
   render(): TemplateResult {
-    console.log(this.links)
-    this.links = [{
-      title: 'ABOUT',
-      url: 'https://www.google.com'  
-    },
-    {
-      title: 'ABILITIES',
-      url: 'https://www.google.com'  
-    },
-    {
-      title: 'EXPERIENCE',
-      url: 'https://www.google.com'  
-    },
-    {
-      title: 'SPEAKING',
-      url: 'https://www.google.com'  
-    },
-    {
-      title: 'CONTACT',
-      url: 'https://www.google.com'  
-    }]
-    console.log(this.links)
     return html`
     <nav class="navigation-container">
       <div>
         <a id="home-link" class="title-font" href="#home">${this.brandName}</a>
       </div>
       <div class="link-container">
-        ${this.links.map((link) => html`<a class="link" href="${link.url}">${link.title}</a>`)}
+        ${this.links.map((link: any) => html`<a class="link" href="${link.url}">${link.title}</a>`)}
       </div>
     </nav>
     `;

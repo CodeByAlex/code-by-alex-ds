@@ -6,7 +6,8 @@
     "moduleResolution": "node",
     "strictBindCallApply": true,
     "experimentalDecorators": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "strictPropertyInitialization": false
   },
   "include": [
     "src/**/*"
