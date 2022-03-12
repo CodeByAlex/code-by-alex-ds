@@ -18,7 +18,7 @@
       "exports": [
         {
           "kind": "custom-element-definition",
-          "name": "cba-button",
+          "name": "t",
           "declaration": {
             "name": "e",
             "module": "dist/code-by-alex-ds.js"
@@ -26,9 +26,9 @@
         },
         {
           "kind": "custom-element-definition",
-          "name": "cba-button",
+          "name": "t",
           "declaration": {
-            "name": "t",
+            "name": "e",
             "module": "dist/code-by-alex-ds.js"
           }
         }
@@ -50,7 +50,23 @@
           "name": "*",
           "declaration": {
             "name": "*",
-            "package": "./button/button"
+            "package": "./components/button/button"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./components/navigation/navigation"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./components/link-icon/link-icon"
           }
         }
       ]
@@ -63,18 +79,12 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/button/button.ts",
+      "path": "src/components/button/button.ts",
       "declarations": [
         {
           "kind": "class",
-          "description": "The Outline Button component",
+          "description": "",
           "name": "Button",
-          "slots": [
-            {
-              "description": "The default, and only slot for this element.",
-              "name": ""
-            }
-          ],
           "members": [
             {
               "kind": "field",
@@ -127,7 +137,7 @@
           "name": "Button",
           "declaration": {
             "name": "Button",
-            "module": "src/button/button.ts"
+            "module": "src/components/button/button.ts"
           }
         },
         {
@@ -135,14 +145,108 @@
           "name": "cba-button",
           "declaration": {
             "name": "Button",
-            "module": "src/button/button.ts"
+            "module": "src/components/button/button.ts"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "src/navigation/navigation.ts",
+      "path": "src/components/link-icon/link-icon.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "LinkIcon",
+          "members": [
+            {
+              "kind": "field",
+              "name": "logoTitle",
+              "type": {
+                "text": "String"
+              },
+              "default": "''",
+              "attribute": "logoTitle"
+            },
+            {
+              "kind": "field",
+              "name": "url",
+              "type": {
+                "text": "String"
+              },
+              "default": "''",
+              "attribute": "url"
+            },
+            {
+              "kind": "field",
+              "name": "imageUrl",
+              "type": {
+                "text": "String"
+              },
+              "default": "''",
+              "attribute": "imageUrl"
+            },
+            {
+              "kind": "field",
+              "name": "getId"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "logoTitle",
+              "type": {
+                "text": "String"
+              },
+              "default": "''",
+              "fieldName": "logoTitle"
+            },
+            {
+              "name": "url",
+              "type": {
+                "text": "String"
+              },
+              "default": "''",
+              "fieldName": "url"
+            },
+            {
+              "name": "imageUrl",
+              "type": {
+                "text": "String"
+              },
+              "default": "''",
+              "fieldName": "imageUrl"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "cba-link-icon",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "LinkIcon",
+          "declaration": {
+            "name": "LinkIcon",
+            "module": "src/components/link-icon/link-icon.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "cba-link-icon",
+          "declaration": {
+            "name": "LinkIcon",
+            "module": "src/components/link-icon/link-icon.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/navigation/navigation.ts",
       "declarations": [
         {
           "kind": "class",
@@ -157,12 +261,19 @@
           "members": [
             {
               "kind": "field",
+              "name": "isNavOpen",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "kind": "field",
               "name": "brandName",
               "type": {
                 "text": "string"
               },
               "default": "''",
-              "description": "The button style variant to use.",
               "attribute": "brandName"
             },
             {
@@ -172,12 +283,15 @@
                 "text": "array"
               },
               "default": "[]",
-              "description": "The button style variant to use.",
               "attribute": "links"
             },
             {
               "kind": "field",
               "name": "getId"
+            },
+            {
+              "kind": "field",
+              "name": "toggleState"
             }
           ],
           "attributes": [
@@ -187,7 +301,6 @@
                 "text": "string"
               },
               "default": "''",
-              "description": "The button style variant to use.",
               "fieldName": "brandName"
             },
             {
@@ -196,7 +309,6 @@
                 "text": "array"
               },
               "default": "[]",
-              "description": "The button style variant to use.",
               "fieldName": "links"
             }
           ],
@@ -214,7 +326,7 @@
           "name": "Navigation",
           "declaration": {
             "name": "Navigation",
-            "module": "src/navigation/navigation.ts"
+            "module": "src/components/navigation/navigation.ts"
           }
         },
         {
@@ -222,7 +334,7 @@
           "name": "cba-navigation",
           "declaration": {
             "name": "Navigation",
-            "module": "src/navigation/navigation.ts"
+            "module": "src/components/navigation/navigation.ts"
           }
         }
       ]

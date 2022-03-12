@@ -15,15 +15,9 @@ export class Navigation extends LitElement {
     return [style];
   }
 
-  /**
-   * The button style variant to use.
-   */
   @property({ type: String })
   brandName = '';
 
-  /**
-   * The button style variant to use.
-   */
   @property({ type: Array })
   links = [];
 
@@ -42,7 +36,7 @@ export class Navigation extends LitElement {
     <nav class="navigation-container">
       <div class="brand-section">
         <a id="home-link" class="title-font" href="#home">${this.brandName}</a>
-        <button type="button" class="nav-toggle" @click=${e => this.toggleState()} aria-label="Menu">
+        <button type="button" class="nav-toggle" @click=${(e:any) => this.toggleState()} aria-label="Menu">
           <span class="icon-bar" aria-hidden="true"></span>
           <span class="icon-bar" aria-hidden="true"></span>
           <span class="icon-bar" aria-hidden="true"></span>

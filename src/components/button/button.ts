@@ -2,10 +2,7 @@ import { html, TemplateResult, CSSResultGroup, LitElement, css, unsafeCSS, CSSRe
 import { customElement, property, queryAll, queryAssignedNodes } from 'lit/decorators.js';
 import style from './button.scss';
 export type ButtonVariant =  'primary' | 'success' | 'info' | 'warning' | 'danger';
-/**
- * The Outline Button component
- * @slot - The default, and only slot for this element.
- */
+
 @customElement('cba-button')
 export class Button extends LitElement {
 
