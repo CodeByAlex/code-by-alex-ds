@@ -1,0 +1,27 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+import { html } from 'lit';
+import './profile.ts';
+
+<Meta
+  title="Atomic Components / Profile"
+  component="cba-profile"
+/>
+
+# Beacon Rating
+
+<Canvas withSource="open">
+  <Story
+    name="Profile - default"
+    component="cba-profile"
+    args={{
+      imageDescriptions: 'This is a profile image of Alex',
+      imageSource: 'https://pbs.twimg.com/profile_images/1101980398735839234/i9oGjqLk_400x400.jpg',
+    }}
+  >
+    {(args) => html`
+        <cba-profile imageDescriptions="${args.imageDescriptions}" imageSource="${args.imageSource}"></cba-profile>
+    `}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Profile - default" />

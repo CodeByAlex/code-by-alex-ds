@@ -18,7 +18,7 @@
           "name": "*",
           "declaration": {
             "name": "*",
-            "package": "./components/button/button"
+            "package": "./components/atoms/button/button"
           }
         },
         {
@@ -26,7 +26,7 @@
           "name": "*",
           "declaration": {
             "name": "*",
-            "package": "./components/navigation/navigation"
+            "package": "./components/atoms/link-icon/link-icon"
           }
         },
         {
@@ -34,7 +34,31 @@
           "name": "*",
           "declaration": {
             "name": "*",
-            "package": "./components/link-icon/link-icon"
+            "package": "./components/atoms/rating/rating"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./components/structure/navigation/navigation"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./components/structure/footer/footer"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./components/structure/section-header/section-header"
           }
         }
       ]
@@ -79,7 +103,80 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/components/link-icon/link-icon.ts",
+      "path": "src/components/atoms/button/button.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "Button",
+          "members": [
+            {
+              "kind": "field",
+              "name": "variant",
+              "type": {
+                "text": "ButtonVariant"
+              },
+              "default": "'primary'",
+              "description": "Button variant type that influences the button's style",
+              "attribute": "variant"
+            },
+            {
+              "kind": "field",
+              "name": "onClick",
+              "type": {
+                "text": "() => void"
+              },
+              "attribute": "onClick"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "variant",
+              "type": {
+                "text": "ButtonVariant"
+              },
+              "default": "'primary'",
+              "description": "Button variant type that influences the button's style",
+              "fieldName": "variant"
+            },
+            {
+              "name": "onClick",
+              "type": {
+                "text": "() => void"
+              },
+              "fieldName": "onClick"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "cba-button",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "Button",
+          "declaration": {
+            "name": "Button",
+            "module": "src/components/atoms/button/button.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "cba-button",
+          "declaration": {
+            "name": "Button",
+            "module": "src/components/atoms/button/button.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/atoms/link-icon/link-icon.ts",
       "declarations": [
         {
           "kind": "class",
@@ -158,7 +255,7 @@
           "name": "LinkIcon",
           "declaration": {
             "name": "LinkIcon",
-            "module": "src/components/link-icon/link-icon.ts"
+            "module": "src/components/atoms/link-icon/link-icon.ts"
           }
         },
         {
@@ -166,14 +263,70 @@
           "name": "cba-link-icon",
           "declaration": {
             "name": "LinkIcon",
-            "module": "src/components/link-icon/link-icon.ts"
+            "module": "src/components/atoms/link-icon/link-icon.ts"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "src/components/rating/rating.ts",
+      "path": "src/components/atoms/profile/profile.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "Profile",
+          "members": [
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "Number"
+              },
+              "default": "0",
+              "attribute": "value"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "value",
+              "type": {
+                "text": "Number"
+              },
+              "default": "0",
+              "fieldName": "value"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "cba-profile",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "Profile",
+          "declaration": {
+            "name": "Profile",
+            "module": "src/components/atoms/profile/profile.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "cba-profile",
+          "declaration": {
+            "name": "Profile",
+            "module": "src/components/atoms/profile/profile.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/atoms/rating/rating.ts",
       "declarations": [
         {
           "kind": "class",
@@ -214,7 +367,7 @@
           "name": "Rating",
           "declaration": {
             "name": "Rating",
-            "module": "src/components/rating/rating.ts"
+            "module": "src/components/atoms/rating/rating.ts"
           }
         },
         {
@@ -222,14 +375,106 @@
           "name": "cba-rating",
           "declaration": {
             "name": "Rating",
-            "module": "src/components/rating/rating.ts"
+            "module": "src/components/atoms/rating/rating.ts"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "src/components/navigation/navigation.ts",
+      "path": "src/components/structure/section-header/section-header.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SectionHeader",
+          "members": [],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "cba-section-header",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "SectionHeader",
+          "declaration": {
+            "name": "SectionHeader",
+            "module": "src/components/structure/section-header/section-header.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "cba-section-header",
+          "declaration": {
+            "name": "SectionHeader",
+            "module": "src/components/structure/section-header/section-header.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/structure/footer/footer.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "Footer",
+          "members": [
+            {
+              "kind": "field",
+              "name": "state",
+              "type": {
+                "text": "String"
+              },
+              "default": "'Baltimore'",
+              "attribute": "state"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "state",
+              "type": {
+                "text": "String"
+              },
+              "default": "'Baltimore'",
+              "fieldName": "state"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "cba-footer",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "Footer",
+          "declaration": {
+            "name": "Footer",
+            "module": "src/components/structure/footer/footer.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "cba-footer",
+          "declaration": {
+            "name": "Footer",
+            "module": "src/components/structure/footer/footer.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/structure/navigation/navigation.ts",
       "declarations": [
         {
           "kind": "class",
@@ -309,7 +554,7 @@
           "name": "Navigation",
           "declaration": {
             "name": "Navigation",
-            "module": "src/components/navigation/navigation.ts"
+            "module": "src/components/structure/navigation/navigation.ts"
           }
         },
         {
@@ -317,80 +562,7 @@
           "name": "cba-navigation",
           "declaration": {
             "name": "Navigation",
-            "module": "src/components/navigation/navigation.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/button/button.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "Button",
-          "members": [
-            {
-              "kind": "field",
-              "name": "variant",
-              "type": {
-                "text": "ButtonVariant"
-              },
-              "default": "'primary'",
-              "description": "Button variant type that influences the button's style",
-              "attribute": "variant"
-            },
-            {
-              "kind": "field",
-              "name": "onClick",
-              "type": {
-                "text": "() => void"
-              },
-              "attribute": "onClick"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "variant",
-              "type": {
-                "text": "ButtonVariant"
-              },
-              "default": "'primary'",
-              "description": "Button variant type that influences the button's style",
-              "fieldName": "variant"
-            },
-            {
-              "name": "onClick",
-              "type": {
-                "text": "() => void"
-              },
-              "fieldName": "onClick"
-            }
-          ],
-          "superclass": {
-            "name": "LitElement",
-            "package": "lit"
-          },
-          "tagName": "cba-button",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "Button",
-          "declaration": {
-            "name": "Button",
-            "module": "src/components/button/button.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "cba-button",
-          "declaration": {
-            "name": "Button",
-            "module": "src/components/button/button.ts"
+            "module": "src/components/structure/navigation/navigation.ts"
           }
         }
       ]

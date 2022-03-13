@@ -16,14 +16,11 @@ export class Rating extends LitElement {
 
   render(): TemplateResult {
     return html`
-    <span>
       ${[...Array(5)].map((_, i) => html`
       <span id="rating-star" class=${classMap({
           'star-icon': true,
           'star-icon-empty': i+1 > this.value,
           'star-icon-full': i-1 < this.value || i=== this.value,
-          })}☆</span>`)}
-    </span>`
-    ;
+          })}☆</span>`)}`;
   }
 }
