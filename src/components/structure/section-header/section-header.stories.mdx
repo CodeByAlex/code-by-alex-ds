@@ -1,0 +1,26 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+import { html } from 'lit';
+import './section-header.ts';
+
+<Meta
+  title="Structural Components / Section Header"
+  component="cba-section-header"
+/>
+
+# Beacon Rating
+
+<Canvas withSource="open">
+  <Story
+    name="Section header - default"
+    component="cba-section-header"
+     args={{
+      text: 'Header Text'
+    }}
+  >
+    {(args) => html`
+        <cba-section-header>${args.text}</cba-section-header>
+    `}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Section header - default" />

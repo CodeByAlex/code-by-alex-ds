@@ -2,24 +2,21 @@ import { html, TemplateResult, CSSResultGroup, LitElement, css, unsafeCSS, CSSRe
 import { customElement, property, queryAll, queryAssignedNodes } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 
-import style from './footer.scss';
+import style from './section-header.scss';
 
-@customElement('cba-footer')
-export class Footer extends LitElement {
+@customElement('cba-section-header')
+export class SectionHeader extends LitElement {
 
   static get styles() {
     return [style];
   }
 
-  @property({ type: String })
-  state: String = 'Baltimore';
-
   render(): TemplateResult {
     return html`
-      <footer class="footer-panel">
-        <div><slot></slot></div>
-        <div class="footer-text">Built in Baltimore</div>
-      </footer>`
+      <div>
+        <h1 class="header"><slot></slot></h1>
+        <hr class="horizontal-row" role="presentation">
+      </div>`
     ;
   }
 }
