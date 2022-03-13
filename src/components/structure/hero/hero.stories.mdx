@@ -1,0 +1,31 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+import { html } from 'lit';
+import './hero.ts';
+
+<Meta
+  title="Structural Components / Hero"
+  component="cba-hero"
+/>
+
+# Beacon Rating
+
+<Canvas withSource="open">
+  <Story
+    name="Hero - default"
+    component="cba-hero"
+     args={{
+      header: 'Alex Wilson',
+      subText: 'Creative Technical Solution Engineer (Developer)',
+      heroImageUrl: 'https://wallpaperaccess.com/full/279547.jpg'
+    }}
+  >
+    {(args) => html`
+        <cba-hero heroImageUrl="${args.heroImageUrl}">
+            <div slot="header">${args.header}</div>
+            <div slot="subText">${args.subText}</div>
+        </cba-hero>
+    `}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Hero - default" />

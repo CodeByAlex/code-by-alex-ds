@@ -1,0 +1,43 @@
+.bg-image {
+    background-image: url("https://wallpaperaccess.com/full/279547.jpg");
+    background-size: cover;
+}
+
+.banner-content-wrapper{
+    max-height: 100vh;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+  
+.hero-text {
+    color: rgb(255, 255, 255);
+    font-family: Raleway, sans-serif;
+    text-align: center;
+    z-index: 2;
+    text-shadow: rgb(0 0 0 / 30%) 0px 0px 10px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.horizontal-line {
+    position:relative;
+    left:50%;
+    border-bottom:1px solid white;
+    animation: line 2s linear forwards;
+    width: 0%;
+}
+
+@keyframes line {
+    from {
+      left:50%;
+      width:0%;
+    }
+    to {
+      left:5%;
+      width:90%;
+    }
+}

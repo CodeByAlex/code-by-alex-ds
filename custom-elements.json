@@ -103,321 +103,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/components/atoms/button/button.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "Button",
-          "members": [
-            {
-              "kind": "field",
-              "name": "variant",
-              "type": {
-                "text": "ButtonVariant"
-              },
-              "default": "'primary'",
-              "description": "Button variant type that influences the button's style",
-              "attribute": "variant"
-            },
-            {
-              "kind": "field",
-              "name": "onClick",
-              "type": {
-                "text": "() => void"
-              },
-              "attribute": "onClick"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "variant",
-              "type": {
-                "text": "ButtonVariant"
-              },
-              "default": "'primary'",
-              "description": "Button variant type that influences the button's style",
-              "fieldName": "variant"
-            },
-            {
-              "name": "onClick",
-              "type": {
-                "text": "() => void"
-              },
-              "fieldName": "onClick"
-            }
-          ],
-          "superclass": {
-            "name": "LitElement",
-            "package": "lit"
-          },
-          "tagName": "cba-button",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "Button",
-          "declaration": {
-            "name": "Button",
-            "module": "src/components/atoms/button/button.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "cba-button",
-          "declaration": {
-            "name": "Button",
-            "module": "src/components/atoms/button/button.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/atoms/link-icon/link-icon.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "LinkIcon",
-          "members": [
-            {
-              "kind": "field",
-              "name": "logoTitle",
-              "type": {
-                "text": "String"
-              },
-              "default": "''",
-              "attribute": "logoTitle"
-            },
-            {
-              "kind": "field",
-              "name": "url",
-              "type": {
-                "text": "String"
-              },
-              "default": "''",
-              "attribute": "url"
-            },
-            {
-              "kind": "field",
-              "name": "imageUrl",
-              "type": {
-                "text": "String"
-              },
-              "default": "''",
-              "attribute": "imageUrl"
-            },
-            {
-              "kind": "field",
-              "name": "getId"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "logoTitle",
-              "type": {
-                "text": "String"
-              },
-              "default": "''",
-              "fieldName": "logoTitle"
-            },
-            {
-              "name": "url",
-              "type": {
-                "text": "String"
-              },
-              "default": "''",
-              "fieldName": "url"
-            },
-            {
-              "name": "imageUrl",
-              "type": {
-                "text": "String"
-              },
-              "default": "''",
-              "fieldName": "imageUrl"
-            }
-          ],
-          "superclass": {
-            "name": "LitElement",
-            "package": "lit"
-          },
-          "tagName": "cba-link-icon",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "LinkIcon",
-          "declaration": {
-            "name": "LinkIcon",
-            "module": "src/components/atoms/link-icon/link-icon.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "cba-link-icon",
-          "declaration": {
-            "name": "LinkIcon",
-            "module": "src/components/atoms/link-icon/link-icon.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/atoms/profile/profile.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "Profile",
-          "members": [
-            {
-              "kind": "field",
-              "name": "value",
-              "type": {
-                "text": "Number"
-              },
-              "default": "0",
-              "attribute": "value"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "value",
-              "type": {
-                "text": "Number"
-              },
-              "default": "0",
-              "fieldName": "value"
-            }
-          ],
-          "superclass": {
-            "name": "LitElement",
-            "package": "lit"
-          },
-          "tagName": "cba-profile",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "Profile",
-          "declaration": {
-            "name": "Profile",
-            "module": "src/components/atoms/profile/profile.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "cba-profile",
-          "declaration": {
-            "name": "Profile",
-            "module": "src/components/atoms/profile/profile.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/atoms/rating/rating.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "Rating",
-          "members": [
-            {
-              "kind": "field",
-              "name": "value",
-              "type": {
-                "text": "Number"
-              },
-              "default": "0",
-              "attribute": "value"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "value",
-              "type": {
-                "text": "Number"
-              },
-              "default": "0",
-              "fieldName": "value"
-            }
-          ],
-          "superclass": {
-            "name": "LitElement",
-            "package": "lit"
-          },
-          "tagName": "cba-rating",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "Rating",
-          "declaration": {
-            "name": "Rating",
-            "module": "src/components/atoms/rating/rating.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "cba-rating",
-          "declaration": {
-            "name": "Rating",
-            "module": "src/components/atoms/rating/rating.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/structure/section-header/section-header.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "SectionHeader",
-          "members": [],
-          "superclass": {
-            "name": "LitElement",
-            "package": "lit"
-          },
-          "tagName": "cba-section-header",
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "SectionHeader",
-          "declaration": {
-            "name": "SectionHeader",
-            "module": "src/components/structure/section-header/section-header.ts"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "cba-section-header",
-          "declaration": {
-            "name": "SectionHeader",
-            "module": "src/components/structure/section-header/section-header.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "src/components/structure/footer/footer.ts",
       "declarations": [
         {
@@ -563,6 +248,338 @@
           "declaration": {
             "name": "Navigation",
             "module": "src/components/structure/navigation/navigation.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/atoms/button/button.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "Button",
+          "members": [
+            {
+              "kind": "field",
+              "name": "variant",
+              "type": {
+                "text": "ButtonVariant"
+              },
+              "default": "'primary'",
+              "description": "Button variant type that influences the button's style",
+              "attribute": "variant"
+            },
+            {
+              "kind": "field",
+              "name": "onClick",
+              "type": {
+                "text": "() => void"
+              },
+              "attribute": "onClick"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "variant",
+              "type": {
+                "text": "ButtonVariant"
+              },
+              "default": "'primary'",
+              "description": "Button variant type that influences the button's style",
+              "fieldName": "variant"
+            },
+            {
+              "name": "onClick",
+              "type": {
+                "text": "() => void"
+              },
+              "fieldName": "onClick"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "cba-button",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "Button",
+          "declaration": {
+            "name": "Button",
+            "module": "src/components/atoms/button/button.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "cba-button",
+          "declaration": {
+            "name": "Button",
+            "module": "src/components/atoms/button/button.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/atoms/profile/profile.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "Profile",
+          "members": [
+            {
+              "kind": "field",
+              "name": "imageDescriptions",
+              "type": {
+                "text": "String"
+              },
+              "default": "'profile image'",
+              "attribute": "imageDescriptions"
+            },
+            {
+              "kind": "field",
+              "name": "imageSource",
+              "type": {
+                "text": "String"
+              },
+              "default": "''",
+              "attribute": "imageSource"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "imageDescriptions",
+              "type": {
+                "text": "String"
+              },
+              "default": "'profile image'",
+              "fieldName": "imageDescriptions"
+            },
+            {
+              "name": "imageSource",
+              "type": {
+                "text": "String"
+              },
+              "default": "''",
+              "fieldName": "imageSource"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "cba-profile",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "Profile",
+          "declaration": {
+            "name": "Profile",
+            "module": "src/components/atoms/profile/profile.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "cba-profile",
+          "declaration": {
+            "name": "Profile",
+            "module": "src/components/atoms/profile/profile.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/structure/section-header/section-header.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SectionHeader",
+          "members": [],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "cba-section-header",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "SectionHeader",
+          "declaration": {
+            "name": "SectionHeader",
+            "module": "src/components/structure/section-header/section-header.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "cba-section-header",
+          "declaration": {
+            "name": "SectionHeader",
+            "module": "src/components/structure/section-header/section-header.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/atoms/link-icon/link-icon.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "LinkIcon",
+          "members": [
+            {
+              "kind": "field",
+              "name": "logoTitle",
+              "type": {
+                "text": "String"
+              },
+              "default": "''",
+              "attribute": "logoTitle"
+            },
+            {
+              "kind": "field",
+              "name": "url",
+              "type": {
+                "text": "String"
+              },
+              "default": "''",
+              "attribute": "url"
+            },
+            {
+              "kind": "field",
+              "name": "imageUrl",
+              "type": {
+                "text": "String"
+              },
+              "default": "''",
+              "attribute": "imageUrl"
+            },
+            {
+              "kind": "field",
+              "name": "getId"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "logoTitle",
+              "type": {
+                "text": "String"
+              },
+              "default": "''",
+              "fieldName": "logoTitle"
+            },
+            {
+              "name": "url",
+              "type": {
+                "text": "String"
+              },
+              "default": "''",
+              "fieldName": "url"
+            },
+            {
+              "name": "imageUrl",
+              "type": {
+                "text": "String"
+              },
+              "default": "''",
+              "fieldName": "imageUrl"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "cba-link-icon",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "LinkIcon",
+          "declaration": {
+            "name": "LinkIcon",
+            "module": "src/components/atoms/link-icon/link-icon.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "cba-link-icon",
+          "declaration": {
+            "name": "LinkIcon",
+            "module": "src/components/atoms/link-icon/link-icon.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/atoms/rating/rating.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "Rating",
+          "members": [
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "Number"
+              },
+              "default": "0",
+              "attribute": "value"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "value",
+              "type": {
+                "text": "Number"
+              },
+              "default": "0",
+              "fieldName": "value"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "cba-rating",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "Rating",
+          "declaration": {
+            "name": "Rating",
+            "module": "src/components/atoms/rating/rating.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "cba-rating",
+          "declaration": {
+            "name": "Rating",
+            "module": "src/components/atoms/rating/rating.ts"
           }
         }
       ]
